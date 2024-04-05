@@ -50,21 +50,21 @@ class _MainViewState extends State<MainView> {
               Icons.menu_book_sharp,
               size:  currentIndex == 0 ? 32.sp : 26.sp,
             ),
-            label: 'FORMULA'
+            label: 'RECIPES'
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite_border_outlined,
               size:  currentIndex == 1 ? 32.sp : 26.sp,
             ),
-            label: 'Избранное'
+            label: 'Керек'
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.receipt_outlined,
               size:  currentIndex == 2 ? 32.sp : 26.sp,
             ),
-            label: 'Мои рецепты'
+            label: 'Менің рецепттерім'
           )
         ],
       ),

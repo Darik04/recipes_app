@@ -20,7 +20,7 @@ class FavoritesView extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.5,
         title: Text(
-          'ИЗБРАННОЕ',
+          'КЕРЕК',
           style: TextStyles(context).black_30_w300,
         ),
       ),
@@ -32,7 +32,7 @@ class FavoritesView extends StatelessWidget {
           if(bloc.favorites.isEmpty){
             return Center(
               child: Text(
-                'Здесь пока пусто!',
+                'Бұл жерде әлі бос!',
                 style: TextStyles(context).black_20_w300,
               ),
             );

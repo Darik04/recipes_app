@@ -87,7 +87,7 @@ class RecipeCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${recipe.ingredients.length} - ингредиента',
+                        '${recipe.ingredients.length} - ингредиент',
                         style: TextStyles(context).black_14_w300,
                         textAlign: TextAlign.center,
                       ),

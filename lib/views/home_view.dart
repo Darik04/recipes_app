@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.5,
         title: Text(
-          'FORMULA',
+          'RECIPES',
           style: TextStyles(context).black_30_w300,
         ),
       ),
@@ -34,14 +34,14 @@ class HomeView extends StatelessWidget {
                 children: [
                   SizedBox(height: 30.h,),
                   Text(
-                    'ИНГЕРДИЕНТЫ',
+                    'ИНГРЕДИЕНТТЕР',
                     style: TextStyles(context).black_20_w300,
                   ),
                   SizedBox(height: 15.h,),
                   IngredientsWidget(),
                   SizedBox(height: 30.h,),
                   Text(
-                    'КАТЕГОРИЙ',
+                    'КАТЕГОРИЯЛАР',
                     style: TextStyles(context).black_20_w300,
                   ),
                 ],
@@ -103,7 +103,7 @@ class HomeView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'ТОП РЕЦЕПТЫ',
+                    'ҮЗДІК РЕЦЕПТТЕР',
                     style: TextStyles(context).black_20_w300,
                   ),
                   SizedBox(height: 15.h,),

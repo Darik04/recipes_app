@@ -38,8 +38,8 @@ class _RecipeWidgetEditState extends State<RecipeWidgetEdit> {
   }
 
   final formKey = GlobalKey<FormState>();
-  String errorMain = 'Введите название';
-  String errorDesc = 'Введите описание';
+  String errorMain = 'Тақырыпты енгізіңіз';
+  String errorDesc = 'Сипаттама енгізіңіз';
 
   TextEditingController titleController = TextEditingController();
   TextEditingController descController = TextEditingController();
@@ -54,7 +54,7 @@ class _RecipeWidgetEditState extends State<RecipeWidgetEdit> {
         description: descController.text,
         createdAt: DateTime.now()
       )));
-      showSuccessAlertToast('Успешно отредактировли рецепт!');
+      showSuccessAlertToast('Рецепт сәтті өңделді!');
       Navigator.pop(context);
     }
   }
@@ -81,19 +81,19 @@ class _RecipeWidgetEditState extends State<RecipeWidgetEdit> {
           child: Column(
             children: [
               SizedBox(height: 20.h,),
-              Text('Редактирование рецепта', style: TextStyles(context).black_30_w300,),
+              Text('Рецептті өңдеу', style: TextStyles(context).black_30_w300,),
               SizedBox(height: 40.h,),
               DefaultTextFormField(
-                hint: 'Название',
+                hint: 'Атауы',
                 isBlack: true,
                 controller: titleController,
                 validator: (val){
-                  return val!.length > 7 ? null : errorMain;
+                  return val!.length > 2 ? null : errorMain;
                 }
               ),
               SizedBox(height: 10.h,),
               DefaultTextFormField(
-                hint: 'Описание',
+                hint: 'Сипаттама',
                 isBlack: true,
                 controller: descController,
                 maxLines: 4,
@@ -117,7 +117,7 @@ class _RecipeWidgetEditState extends State<RecipeWidgetEdit> {
                     ]
                   ),
                   alignment: Alignment.center,
-                  child: Text('Сохранить', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
+                  child: Text('Сақтау', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
                 ),
               ),
             ],

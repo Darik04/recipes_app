@@ -22,7 +22,7 @@ class MyRecipesView extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.5,
         title: Text(
-          'МОИ РЕЦЕПТЫ',
+          'МЕНІҢ РЕЦЕПТЕРІМ',
           style: TextStyles(context).black_30_w300,
         ),
       ),
@@ -47,7 +47,7 @@ class MyRecipesView extends StatelessWidget {
             ]
           ),
           alignment: Alignment.center,
-          child: Text('Создать рецепт', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
+          child: Text('Рецепт жасаңыз', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
         ),
       ),
       body: BlocBuilder<MainBloc, MainState>(
@@ -58,7 +58,7 @@ class MyRecipesView extends StatelessWidget {
           if(bloc.myRecipes.isEmpty){
             return Center(
               child: Text(
-                'Здесь пока пусто!',
+                'Бұл жерде әлі бос!',
                 style: TextStyles(context).black_20_w300,
               ),
             );

@@ -101,7 +101,7 @@ class RecipeDetailView extends StatelessWidget {
                 children: [
                   SizedBox(height: 30.h,),
                   Text(
-                    'ОПИСАНИЕ',
+                    'СИПАТТАМАСЫ',
                     style: TextStyles(context).black_20_w300,
                     textAlign: TextAlign.center,
                   ),
@@ -119,7 +119,7 @@ class RecipeDetailView extends StatelessWidget {
                   ),
                   SizedBox(height: 30.h,),
                   Text(
-                    'ИНГРЕДИЕНТЫ',
+                    'ИНГРЕДИЕНТТЕР',
                     style: TextStyles(context).black_20_w300,
                     textAlign: TextAlign.center,
                   ),
@@ -154,7 +154,7 @@ class RecipeDetailView extends StatelessWidget {
                   ),
                   SizedBox(height: 30.h,),
                   Text(
-                    'ШАГИ',
+                    'ҚАДАМДАР',
                     style: TextStyles(context).black_20_w300,
                     textAlign: TextAlign.center,
                   ),

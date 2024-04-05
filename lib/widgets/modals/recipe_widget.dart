@@ -35,8 +35,8 @@ class _RecipeWidgetState extends State<RecipeWidget> {
   }
 
   final formKey = GlobalKey<FormState>();
-  String errorMain = 'Введите название';
-  String errorDesc = 'Введите описание';
+  String errorMain = 'Тақырыпты енгізіңіз';
+  String errorDesc = 'Сипаттама енгізіңіз';
 
   TextEditingController titleController = TextEditingController();
   TextEditingController descController = TextEditingController();
@@ -48,7 +48,7 @@ class _RecipeWidgetState extends State<RecipeWidget> {
         description: descController.text,
         createdAt: DateTime.now()
       )));
-      showSuccessAlertToast('Успешно создали рецепт!');
+      showSuccessAlertToast('Рецепт сәтті жасалды!');
       Navigator.pop(context);
     }
   }
@@ -75,19 +75,19 @@ class _RecipeWidgetState extends State<RecipeWidget> {
           child: Column(
             children: [
               SizedBox(height: 20.h,),
-              Text('Создание рецепта', style: TextStyles(context).black_30_w300,),
+              Text('Рецепт құру', style: TextStyles(context).black_30_w300,),
               SizedBox(height: 40.h,),
               DefaultTextFormField(
-                hint: 'Название',
+                hint: 'Атауы',
                 isBlack: true,
                 controller: titleController,
                 validator: (val){
-                  return val!.length > 7 ? null : errorMain;
+                  return val!.length > 2 ? null : errorMain;
                 }
               ),
               SizedBox(height: 10.h,),
               DefaultTextFormField(
-                hint: 'Описание',
+                hint: 'Сипаттама',
                 isBlack: true,
                 controller: descController,
                 maxLines: 4,
@@ -111,7 +111,7 @@ class _RecipeWidgetState extends State<RecipeWidget> {
                     ]
                   ),
                   alignment: Alignment.center,
-                  child: Text('Создать рецепт', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
+                  child: Text('Рецепт құру', style: TextStyles(context).white_25_w800.copyWith(fontWeight: FontWeight.w400),)
                 ),
               ),
             ],

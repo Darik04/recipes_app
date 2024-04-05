@@ -85,7 +85,7 @@ class MyRecipeCard extends StatelessWidget {
               behavior: HitTestBehavior.opaque,
               onTap: (){
                 bloc.add(CreateRecipeEvent(recipe: recipe));
-                showAlertToast('Успешно удалили рецепт!');
+                showAlertToast('Рецепт жойылды!');
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 40.w), 
