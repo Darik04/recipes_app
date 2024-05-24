@@ -30,7 +30,9 @@ class MyApp extends StatelessWidget {
             primaryColor: ColorStyles.primary,
             primarySwatch: ColorStyles.primarySwath,
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-              backgroundColor: ColorStyles.white
+              backgroundColor: ColorStyles.white,
+              selectedItemColor: ColorStyles.primary,
+              unselectedItemColor: ColorStyles.grey888
             ),
             bottomAppBarColor: Colors.green,
             appBarTheme: const AppBarTheme(

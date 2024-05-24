@@ -5,6 +5,7 @@ import 'package:recipes_app/constants/colors/color_styles.dart';
 import 'package:recipes_app/constants/data_list.dart';
 import 'package:recipes_app/constants/texts/text_styles.dart';
 import 'package:recipes_app/views/category_view.dart';
+import 'package:recipes_app/views/illnesses_view.dart';
 import 'package:recipes_app/widgets/ingredients_widget.dart';
 import 'package:recipes_app/widgets/recipe_card.dart';
 
@@ -22,6 +23,17 @@ class HomeView extends StatelessWidget {
           'RECIPES',
           style: TextStyles(context).black_30_w300,
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => IllnessesView()));
+            }, 
+            icon: Icon(
+              Icons.info_outline,
+              color: ColorStyles.primary,
+            )
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
